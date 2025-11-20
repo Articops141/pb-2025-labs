@@ -1,1 +1,53 @@
+#1
+# name, age = input("Введите ваше имя и возраст через запятую").split(",")
+# for i in range(0,11):
+#     print(f"Меня зовут {name}, мне {age}")
 
+
+
+# #2
+# c = int(input("Введите любое число от 1 до 9"))
+# for i in range(1,11):
+#     print(c*i)
+
+
+# #3
+# for i in range(0,100,3):
+#     print(i)
+
+#4
+# a = int(input("Введите факториал числа: "))
+# f = 1
+# for i in range(1, a+1):
+#     f = f+1
+# print("Факториал", f )
+
+#5
+# a =20
+# while a > -1:
+#     print(f"znachenie: {a}")
+#     a =a - 1
+
+#6
+# fib = int(input("Введите число для вывода чисел Фибоначчи: "))
+# print(f"Числа Фибоначчи до {fib}:")
+# a, b = 0, 1
+# print(a, end=" ")
+# while b <= fib:
+#     print(b, end=" ")
+#     a, b = b, a + b
+
+#7
+# s = input("Введите строку: ")
+# r = ""
+# for i, char in enumerate(s, 1):
+#     r += char + str(i)
+# print(f"Исходная строка: {s}")
+# print(f"Результат: {r}")
+
+#8
+# while True:
+#     c = input("Введите ва числа через пробел").split()
+#     a = int(c[0])
+#     b = int(c[1])
+#     print(f"Сумма равна:{a+b}")
