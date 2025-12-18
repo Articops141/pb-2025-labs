@@ -5,13 +5,13 @@ for i in range(0,11):
 
 
 
-# #2
+#2
 c = int(input("Введите любое число от 1 до 9"))
 for i in range(1,11):
     print(c*i)
 
 
-# #3
+#3
 for i in range(0,100,3):
     print(i)
 
@@ -51,3 +51,4 @@ while True:
     a = int(c[0])
     b = int(c[1])
     print(f"Сумма равна:{a+b}")
+
