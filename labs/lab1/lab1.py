@@ -1,0 +1,92 @@
+#1
+a = 123 #int
+b = 1.1234 #float
+c = 'hello' #str
+d = False #bool
+
+#2
+name = "Artem"
+age = 18
+print(name, age)
+
+#3
+a1=342
+b1=56.2
+c1=43
+d1 = a1+b1+c1
+print(d1)
+
+#4
+aa = 3
+bb = 8
+cc = (aa+4*bb)*(aa-3*bb)+aa**2
+print(cc)
+
+#5
+print("Vvedite dannie storon pryamougolnika")
+h = float(input('Vvedite dlinu pryamougolnika'))
+j =float( input('Vvedite shirinu pryamougolnika'))
+perimetr = 2*(h+j)
+ploshad = h*j
+print(f"Perimetr pryamougolnika {perimetr}")
+print(f"Ploshad pryamougolnika {ploshad}")
+
+#6
+print("*   *   *")
+print(" * * * * ")
+print("  *   *  ")
+
+#7
+m=12
+n=15
+print(m+n)
+print(m-n)
+print(m*n)
+print(m/n)
+print(m//n)
+print(m**n)
+print(m+n)
+print(m==n)
+print(m>n)
+print(m<n)
+print(m<=n)
+print(m>=n)
+print(m!=n)
+
+#8
+name, age = input("Vvedite vashe imya i vosrast cherez zapatuy").split(",")
+print(f"Menya zovut {name}, mne {age}")
+
+#9
+w1= ""
+w2= ""
+w3= ""
+w4= ""
+w5= ""
+w6= ""
+w7= ""
+kk=w1+w2+w3+w4+w5+w6+w7
+print(kk)
+
+#10
+o = "Net! "
+p = "Da! "
+i = o+p
+print(i*4)
+
+#11
+st=input("vvedite lubie tri chisla cherez zapatuy")
+chislo = st.split(',')
+a = int(chislo[0].strip())
+b = int(chislo[1].strip())
+c = int(chislo[2].strip())
+d = (a+c)//b
+print(f"rezultat: {d}")
+
+#12
+slovo = input("Vvedite slovo iz 10 simvolov")
+print(f"{slovo}")
+print({slovo[:4]})
+print({slovo[-2:]})
+print({slovo[4:8]})
+print({slovo[::-1]})
