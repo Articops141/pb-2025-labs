@@ -64,21 +64,11 @@ pers = {"Артём": {
 print(pers["Артём"])
 
 #7
-dict = {
-    "apple": "яблоко",
-    "cat": "кот",
-    "dog": "собака",
-    "book": "книга",
-    "house": "дом",
-    "water": "вода",
-    "sun": "солнце",
-    "tree": "дерево",
-    "car": "машина",
-    "computer": "компьютер"
-}
-en_dict = {value: key for key, value in dict.items()}
-word = input("Введите русское слово для перевода: ").lower().strip()
-if word in en_dict:
-    print(f"Перевод на английский: {en_dict[word]}")
+t = {'apple': 'яблоко', 'cat': 'кот', 'dog': 'собака'}
+r = input("Введите русское слово: ")
+for eng, rus in t.items():
+    if rus == r:
+        print("Перевод -", eng)
+        break
 else:
-    print("Извините, слово не найдено в словаре")
+    print("Слово не найдено")
