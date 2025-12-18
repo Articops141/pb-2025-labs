@@ -1,59 +1,54 @@
 #1
-# a = [1, 5, 10, 35, 17, 3, 59, 100, 78, 6]
-# if 3 in a:
-#     index = a.index(3)
-#     a[index] =30
-# print(a)
+# a = float(input("Введите температуру: "))
+# print("Кондиционер включается" if a >= 20 else "Кондиционер выключается")
 
 #2
-# a = [2, 4, 6, 8, 10, 20]
-# b = [x**2 for x in a]
-# print(b)
-
+# m = int(input("Введите номер месяца (1-12): "))
+# if m in [12,1,2]:
+#     print("Зима")
+# elif m in [3,4,5]:
+#     print("Весна")
+# elif m in [6,7,8]:
+#     print("Лето")
+# elif m in [9,10,11]:
+#     print("Осень")
+# else: print("Ошибка")
 
 #3
-# a = [5, 8, 11, 12, 20]
-# b = max(a)
-# c = b // len(a)
-# print(c)
+# try:
+#     age = float(input("Введите возраст собаки: "))
+#     if age < 1 or age > 22:
+#         print("Ошибка")
+#     else:
+#         if age <= 2:
+#             human = age * 10.5
+#         else:
+#             human = 21 + (age - 2) * 4
+#         print(f"Человеческий возраст: {human}")
+# except:
+#     print("Ошибка")
 
 #4
-# b = [1,3,12563, -45, -5]
-# b = sorted(b)
-# print(b)
+# n = input("Введите число: ")
+# if n.isdigit():
+#     n = int(n)
+#     if n % 10 % 2 == 0 and sum(int(d) for d in str(n)) % 3 == 0:
+#         print("Делится на 6")
+#     else:
+#         print("Не делится на 6")
+# else:
+#     print("Ошибка")
 
 #5
-# goods = {"Мандарины": {
-#     "цена" : 150
-# },
-#     "Персики": {
-#         "цена": 270
-# },
-#     "Нектарины": {
-#         "цена": 260
-# },
-#     "Бананы": {
-#         "цена": 50
-# },
-#     "Виноград": {
-#         "цена": 130
-# }}
-# b = max(goods)
-# c = min(goods)
-# print(c)
-# print(b)
-
-#6
-# pers = {"Артём": {
-#     "возраст" : 18,
-#     "рост" : 185
-# },
-#     "Семён": {
-#         "возраст": 30,
-#         "рост": 170
-# },
-#     "Доминик": {
-#         "возраст": 23,
-#         "рост": 190
-# }}
-# print(pers["Артём"])
+# b = input("Введите пароль: ")
+# checks = [
+#     len(b) >= 8,
+#     any(c.isupper() for c in b),
+#     any(c.islower() for c in b),
+#     any(c.isdigit() for c in b),
+#     any(not c.isalnum() for c in b)
+# ]
+# if all(checks):
+#     print("Пароль надежный")
+# else:
+#     print("Пароль ненадежный")
