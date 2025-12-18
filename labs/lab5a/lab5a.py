@@ -1,0 +1,66 @@
+#1
+dict = [("Проверить почту", 3), ("Написать отчёт", 1), ("Позвонить клиенту", 2)]
+sorted = sorted(dict, key=lambda x: x[1])
+print(sorted)
+
+#2
+dict = [
+    {"item": "Laptop", "price": 1000, "quantity": 2},
+    {"item": "Mouse", "price": 25, "quantity": 5},
+    {"item": "Keyboard", "price": 45, "quantity": 3}
+]
+
+total = list(map(lambda x: x["price"] * x["quantity"], dict))
+print("Общая стоимость каждой покупки:", total)
+
+maxx = max(dict, key=lambda x: x["price"] * x["quantity"])
+print("Самая дорогая покупка:", maxx)
+print("Её общая стоимость:", maxx["price"] * maxx["quantity"])
+
+#3
+clients = [
+    {"name": "Alice", "income": 50000},
+    {"name": "Bob", "income": 120000},
+    {"name": "Charlie", "income": 70000}
+]
+
+category = list(map(lambda client: {
+    "name": client["name"],
+    "income": client["income"],
+    "category": "High" if client["income"] > 100000 else
+               "Medium" if client["income"] >= 50000 else "Low"
+}, clients))
+
+for client in category:
+    print(client)
+
+#4
+dict = [
+    {"flight": "A1", "departure": 9, "arrival": 12},
+    {"flight": "B2", "departure": 14, "arrival": 18},
+    {"flight": "C3", "departure": 6, "arrival": 8}
+]
+
+l = list(filter(lambda flight: flight["arrival"] < 12, dict))
+print(l)
+
+#5
+messages = [
+    {"user": "Исследователь А", "message": "Отчёт готов. Ссылка: http://foundation.org"},
+    {"user": "Доктор Б", "message": "Документы можно найти здесь: https://classified.com"},
+    {"user": "Охранник В", "message": "Нет аномальной активности за схему."},
+    {"user": "Агент Г", "message": "Срочно изучите материалы по объекту 173 на http://statue-database.net"},
+    {"user": "Д-р Кляйн", "message": "Обновленный протокол эксперимента доступен: https://safezone.scp"},
+    {"user": "Сотрудник Д", "message": "Прособа ознакомиться с https://docs.momalles-secure.com перед схемой."},
+    {"user": "Старший ученый Л", "message": "Все записи переданы. Никаких аномалий на объекте 096."},
+    {"user": "Техник Э", "message": "Проблема с сервером устранена. Подробнее: http://fix-report.internal"}
+]
+
+import re
+result = list(map(lambda msg: {
+    "user": msg["user"],
+    "message": re.sub(r'https?://[^\s]+', '[ДАННЫЕ УДАЛЕНЫ]', msg["message"])
+}, filter(lambda msg: 'http' in msg["message"], messages)))
+
+for msg in result:
+    print(msg)
